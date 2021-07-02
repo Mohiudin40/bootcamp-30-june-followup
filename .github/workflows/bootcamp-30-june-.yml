@@ -14,7 +14,7 @@ jobs:
     - uses: actions/checkout@v2
     
     - name: instaling Node
-    - uses: actions/setuo-node@v2-beta
+    - uses: actions/setup-node@v2-beta
       with:
         node-version: 12
         
@@ -22,6 +22,4 @@ jobs:
       run: npm install --globle surge
     - name: deploy using surge
       run: surge ./ bootcamp-30-june-followup.surge.sh --token $ {{ secrets SURGE_TOKEN}}
-        docker run \
-        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+       
