@@ -21,5 +21,5 @@ jobs:
     - name:  installing surge  
       run: npm install --globle surge
     - name: deploy using surge
-      run: surge ./C:\Users\G.mohi u din\Documents\GitHub\bootcamp-30-june-followup bootcamp-30-june-followup.surge.sh --token $ {{ secrets.SURGE_TOKEN}}
+      run: surge  ./  bootcamp-30-june-followup.surge.sh --token $ {{ secrets.SURGE_TOKEN }}
        
